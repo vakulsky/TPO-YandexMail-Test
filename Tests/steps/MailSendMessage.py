@@ -45,8 +45,6 @@ def step_impl(context):
 @when("I click on Write button")
 def step_impl(context):
     find_by_xpath(context, "//a[@href='#compose']").click()
-    # find_by_partial_link(context, "compose").click()
-
 
 @step("I fill Email field with user's email")
 def step_impl(context):
@@ -115,7 +113,6 @@ def step_impl(context):
 
 @then("I should see a message with subject (?P<subject>.+) and delayed time")
 def step_impl(context, subject):
-    print(time_delayed)
     subject_data = find_by_xpath(context,
                                  "//span[@class='mail-MessageSnippet-Item mail-MessageSnippet-Item_subject'][1]/span[1]")
     time_delay_el = find_by_xpath(context,
