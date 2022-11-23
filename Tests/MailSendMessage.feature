@@ -20,7 +20,6 @@ Feature: MailSend
       |subject       | body    |
       | some subject |some body|
 
-  #  todo close browser
 
   Scenario Outline: SendWithDelay
     Given I'm authenticated user on inbox page
@@ -40,5 +39,3 @@ Feature: MailSend
     Examples:
       |subject  |
       | delayed |
-
-  #  todo close browser

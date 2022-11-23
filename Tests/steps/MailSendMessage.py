@@ -1,11 +1,8 @@
 from behave import *
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from helper import *
 from time import sleep
 
 import os
-from dotenv import load_dotenv
 import traceback
 
 use_step_matcher("re")
@@ -53,7 +50,6 @@ def step_impl(context):
 
 @step("I fill Email field with user's email")
 def step_impl(context):
-    load_dotenv()
     find_by_xpath(context, "//div[@title='Кому']").send_keys(os.getenv("EMAIL"))
 
 

@@ -4,29 +4,39 @@ Feature: MailLogin
   # to log in with his account
 
   Scenario: LoginRegistered
-    Given I'm on the mail login page
-    When I enter user's email
-    And I press next
+    Given I'm on the mail page
+    When I go to login page
+    And I select email as login type
+    And I enter user's email
+    And I click on login button
     And I enter user's password
     And I click on login button
     Then I should see user's Inbox page
 
-#  todo close browser
 
-  Scenario: LoginStranger
-    Given I'm on the mail login page
-    When I enter stranger's email
-    And I press next
+  Scenario Outline: LoginStranger
+    Given I'm on the mail page
+    When I go to login page
+    And I select email as login type
+    And I enter stranger's email <email>
+    And I click on login button
     Then I should see NoUserExists message
 
-  #  todo close browser
+    Examples:
+      |email              |
+      |example@example.com|
 
-  Scenario: LoginRegisteredWrongPass
-    Given I'm on the mail login page
-    When I enter user's email
-    And I press next
-    And I enter something but not user's password
+
+  Scenario Outline: LoginRegisteredWrongPass
+    Given I'm on the mail page
+    When I go to login page
+    And I select email as login type
+    And I enter user's email
+    And I click on login button
+    And I enter <something> which is not user's password
     And I click on login button
     Then I should see WrongPassword message
 
-  #  todo close browser
+    Examples:
+    |something|
+    |12345678 |
