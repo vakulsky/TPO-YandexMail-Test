@@ -33,10 +33,9 @@ def step_impl(context):
 
 @then("I should see user's Inbox page")
 def step_impl(context):
-    # sleep(5)
-    # WebDriverWait(context.browser, 10).until(EC.title_contains("Входящие"))
-    # assert(context.browser.title.find("Входящие") != -1)
-    assert(1 == 1)
+    sleep(5)
+    WebDriverWait(context.browser, 10).until(EC.title_contains("Входящие"))
+    assert(context.browser.title.find("Входящие") != -1)
 
 @then("I should see NoUserExists message")
 def step_impl(context):

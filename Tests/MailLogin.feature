@@ -3,7 +3,7 @@ Feature: MailLogin
   # In order to use the mail service, a registered user must be able
   # to log in with his account
 
-  Scenario: LoginRegistered
+  Scenario: RegisteredLogin
     Given I'm on the mail page
     When I go to login page
     And I select email as login type
@@ -23,8 +23,8 @@ Feature: MailLogin
     Then I should see NoUserExists message
 
     Examples:
-      |email              |
-      |example@example.com|
+      |email  |
+      |exalebnle94p95b9mple|
 
 
   Scenario Outline: LoginRegisteredWrongPass
