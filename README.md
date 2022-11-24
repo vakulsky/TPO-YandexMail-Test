@@ -4,6 +4,7 @@
 
 ```bash
 git clone https://github.com/vakulsky/TPO-YandexMail-Test.git
+cd TPO-YandexMail-Test
 ```
 
 ### Виртуальное окружение
