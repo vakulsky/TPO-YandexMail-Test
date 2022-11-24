@@ -3,8 +3,7 @@
 ## Установка
 
 ```bash
-git clone [https://github.com/vakulsky/TPO-YandexMail-Test.git](https://github.com/vakulsky/TPO-YandexMail-Test.git)
-cd TPO-YandexMail-Test
+git clone https://github.com/vakulsky/TPO-YandexMail-Test.git
 ```
 
 ### Виртуальное окружение
