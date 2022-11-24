@@ -1,7 +1,7 @@
 # Created by grigory at 23/11/2022
-Feature: MailLogin
+Feature: MailAuth
   # In order to use the mail service, a registered user must be able
-  # to log in with his account
+  # to log in with their account and log out from their account
 
   Scenario: RegisteredLogin
     Given I'm on the mail page
@@ -40,3 +40,10 @@ Feature: MailLogin
     Examples:
     |something|
     |12345678 |
+
+
+  Scenario: LogOut
+      Given I'm authenticated user on inbox page
+      When I click on my profile picture
+      And Click on LogOut
+      Then I should not see user's Inbox page

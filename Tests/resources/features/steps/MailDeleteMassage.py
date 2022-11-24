@@ -9,7 +9,7 @@ from selenium.webdriver.common.keys import Keys
 import os
 
 
-@step("I've just received message with some subject (?P<subject>.+)")
+@step("I've just received message with some unique subject (?P<subject>.+)")
 def step_impl(context, subject):
     find_by_xpath(context, "//a[@href='#compose']").click()
     find_by_xpath(context, "//div[@title='Кому']").send_keys(os.getenv("EMAIL"))

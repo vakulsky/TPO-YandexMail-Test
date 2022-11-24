@@ -4,7 +4,7 @@ Feature: MailDeleteMassage
 
   Scenario Outline: DeleteMessage
     Given I'm authenticated user on inbox page
-    And I've just received message with some subject <subject>
+    And I've just received message with some unique subject <subject>
     When I sync messages
     And I select message with subject <subject>
     And Click on Delete button
